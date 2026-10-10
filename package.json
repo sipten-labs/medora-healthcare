@@ -1,0 +1,27 @@
+{
+  "name": "medora-healthcare-platform",
+  "version": "1.1.0",
+  "private": true,
+  "description": "MEDORA is a responsive full-stack healthcare appointment platform portfolio demo.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c green,cyan \"npm:server:dev\" \"npm:client:dev\"",
+    "server:dev": "node --watch server/index.js",
+    "client:dev": "vite --config client/vite.config.js",
+    "client:build": "vite build --config client/vite.config.js",
+    "build": "npm run client:build",
+    "start": "node index.js",
+    "preview": "vite preview --config client/vite.config.js --host 127.0.0.1"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "lucide-react": "^1.54.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^9.1.2",
+    "vite": "^8.3.4"
+  }
+}
